@@ -14,7 +14,7 @@ query.rowCount > 0 ? res.status(200).send("succesful") :res.status(400).send("er
     }
     }
     catch(err){
-        res.status(400).send("error")
+        res.status(400).send("error1")
     }
 
 
