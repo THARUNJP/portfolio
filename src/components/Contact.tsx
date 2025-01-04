@@ -18,12 +18,12 @@ const Contact: React.FC = () => {
     const email=emailRef.current?.value;
     const message=messageRef.current?.value;
     if(name && email && message ){
-      console.log("hi");
+      
       
       const res = await messageValidate(name,email,message)
-      console.log(res);
       
       
+      if(res === 200){
         setTimeout(() => setIsSubmitting(false), 1500);
         setTimeout(() => {
           if (nameRef.current) nameRef.current.value = "";
@@ -31,6 +31,14 @@ const Contact: React.FC = () => {
           if (messageRef.current) messageRef.current.value = "";
           alert("Your message has been sent successfully.");
        }, 1600);
+
+      }
+      else{
+        setTimeout(() => setIsSubmitting(false), 1500);
+        alert("Try again later.")
+
+      }
+        
     }
     else{
       alert("Every fields are mandatory")
