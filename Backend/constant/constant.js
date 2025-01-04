@@ -2,10 +2,10 @@ import pkg from 'pg';
 const { Pool } = pkg;
 
 const DB = new Pool({
-    user: 'Tharun',
-    host: 'localhost',
-    database: 'msg-box',
-    password: 'Tharun10+',
+    user: 'message_box_user',
+    host: 'dpg-ctse8j23esus73dph3gg-a',
+    database: 'message_box',
+    password: 'lRTFn3q0emG1eOzln5j5H4vCDmyM30D2',
     port: 5432,
 });
 
